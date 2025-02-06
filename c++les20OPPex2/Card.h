@@ -39,5 +39,36 @@ public:
 		cout << "Closed card: " << cardnumber << endl;
 		delete[] name;
 	}
+
+	unsigned long getCardnumber() {
+		return cardnumber;
+	}
+	const char* getName() {
+		return name;
+	}
+	const char* getDate() {
+		return date;
+	}
+	int getPin() {
+		return pin;
+	}
+	float getCash() {
+		return cash;
+	}
+
+	void setPin(int oldpin, int newpin) {
+		if (oldpin != pin)cout << "ERROR: WRONG PIN CODE"<<endl;
+		else {
+			pin = newpin;
+			cout << "Updated PIN: " << pin << endl;
+		}
+	}
+
+	void showInfo() {
+		cout << "Card numbeer: " << cardnumber << endl;
+		cout << "Name: " << name << endl;
+		cout << "Ex. date: " << date << endl;
+		cout << "Cash: " << cash << "HRN" << endl;
+	}
 };
 
